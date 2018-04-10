@@ -13,3 +13,7 @@ def repeat (phrase, number = 2)
   end
   return new_phrase.join(' ')
 end
+
+def start_of_word word
+  
+end
