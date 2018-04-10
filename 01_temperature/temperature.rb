@@ -3,5 +3,5 @@ def ftoc temperature
 end
 
 def ctof temperature
-  temperature = (temperature * 9/5) + 32
+  return temperature = (temperature * 9/5) + 32
 end
