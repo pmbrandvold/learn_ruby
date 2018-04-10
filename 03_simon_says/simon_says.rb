@@ -15,7 +15,12 @@ def repeat (phrase, number = 2)
 end
 
 def start_of_word word, number = 1
-  word.split('').each do |c|
-    return c[number-1]
+  new_word = []
+  word.split('').each_with_index do |c, i|
+    if i == number
+      new_word.push(c)
+      new_word.push(i)
+    end
   end
+  return new_word.join()
 end
