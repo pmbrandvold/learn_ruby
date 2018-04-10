@@ -14,6 +14,8 @@ def repeat (phrase, number = 2)
   return new_phrase.join(' ')
 end
 
-def start_of_word word
-  
+def start_of_word word, number = 1
+  word.split('').each do |c|
+    return c[number-1]
+  end
 end
