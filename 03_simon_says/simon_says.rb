@@ -1,1 +1,4 @@
-#write your code here
+def echo phrase
+  return phrase
+end
+
