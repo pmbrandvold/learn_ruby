@@ -6,9 +6,10 @@ def shout phrase
   return phrase.upcase
 end
 
-def repeat phrase, number = 1
+def repeat (phrase, number = 2)
+  new_phrase = []
   number.times do
-    phrase += (" " + phrase)
+   new_phrase.push(phrase)
   end
-  return phrase
+  return new_phrase.join(' ')
 end
