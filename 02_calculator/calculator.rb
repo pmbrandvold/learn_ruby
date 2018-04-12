@@ -34,9 +34,13 @@ def factorial n
     return 0
   end
   numbers = []
-  n.times do
+  n-1.times do
     numbers.push(n)
     n - 1
   end
-  return numbers.sort!
+  numbers.sort!
+  numbers.each do |n|
+    n *= n
+  end
+  return n
 end
