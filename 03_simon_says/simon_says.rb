@@ -29,6 +29,11 @@ def first_word phrase, number = 0
   return splits[number]
 end
 
-def titleize word
-  return word.capitalize
+def titleize phrase
+  words = phrase.split(" ")
+  new_phrase = []
+  words.each do |w|
+    new_phrase.push(w.capitalize)
+  end
+  return new_phrase.join(" ")
 end
