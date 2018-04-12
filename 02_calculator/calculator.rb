@@ -24,3 +24,7 @@ def multiply numbers
   end
   return answer.to_i
 end
+
+def powers a, b
+  return a ** b
+end
