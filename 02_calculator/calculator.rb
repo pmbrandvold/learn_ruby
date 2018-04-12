@@ -30,17 +30,14 @@ def powers a, b
 end
 
 def factorial n
+  repeat = n - 1
   if n == 0
     return 0
   end
   numbers = []
-  n-1.times do
+  repeat.times do
     numbers.push(n)
-    n - 1
+    n -= 1
   end
-  numbers.sort!
-  numbers.each do |n|
-    n *= n
-  end
-  return n
+  return multiply(numbers)
 end
