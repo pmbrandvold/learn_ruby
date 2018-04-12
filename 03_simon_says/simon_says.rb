@@ -17,9 +17,8 @@ end
 def start_of_word word, number = 1
   new_word = []
   word.split('').each_with_index do |c, i|
-    if i == number
+    if i < number
       new_word.push(c)
-      new_word.push(i)
     end
   end
   return new_word.join()
