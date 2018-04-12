@@ -23,3 +23,8 @@ def start_of_word word, number = 1
   end
   return new_word.join()
 end
+
+def first_word phrase, number = 0
+  splits = phrase.split(" ")
+  return splits[number]
+end
