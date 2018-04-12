@@ -28,3 +28,7 @@ def first_word phrase, number = 0
   splits = phrase.split(" ")
   return splits[number]
 end
+
+def titleize word
+  return word.capitalize
+end
