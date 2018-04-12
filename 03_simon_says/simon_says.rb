@@ -32,8 +32,12 @@ end
 def titleize phrase
   words = phrase.split(" ")
   new_phrase = []
-  words.each do |w|
-    new_phrase.push(w.capitalize)
+  words.each_with_index do |w, i|
+    if (w == "and" or w == "the" or w == "a" or w == "an" or w == "over") and i != 0
+      new_phrase.push(w)
+    else
+      new_phrase.push(w.capitalize)
+    end
   end
   return new_phrase.join(" ")
 end
