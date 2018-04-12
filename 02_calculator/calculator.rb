@@ -16,3 +16,11 @@ def sum numbers
   end
   return answer.to_i
 end
+
+def multiply numbers
+  answer = 1
+  numbers.each do |n|
+    answer *= n
+  end
+  return answer.to_i
+end
