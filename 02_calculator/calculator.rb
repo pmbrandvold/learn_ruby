@@ -28,3 +28,15 @@ end
 def powers a, b
   return a ** b
 end
+
+def factorial n
+  if n == 0
+    return 0
+  end
+  numbers = []
+  n.times do
+    numbers.push(n)
+    n - 1
+  end
+  return numbers.sort!
+end
