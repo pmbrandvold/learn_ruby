@@ -10,13 +10,13 @@ class Timer
     minutes = 0
     display_hours = ''
     display_minutes = ''
-    if @seconds > 60
-      minutes += 1
-      @seconds = 0
+    if @seconds > (3600)
+      hours = (@seconds / 60 / 60).to_i
+      @seconds = @seconds % (60*60) 
     end
-    if minutes > 60
-      hours += 1
-      minutes = 0
+    if @seconds > 60  
+      minutes = (@seconds / 60).to_i
+      @seconds = @seconds % 60
     end
     if hours < 10
       display_hours = "0" + hours.to_s
