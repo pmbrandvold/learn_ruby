@@ -5,11 +5,16 @@ class Book
 
   def title
     new_title = []
-    conjunctions = ['and', 'an', 'the']
+    conjunctions = ['and']
     prepositions = ['in', 'of']
-    @title.each do |w|
-      if conjunctions.include?(w) || prepositions.include?(w)
+    articles = ['a', 'the', 'an']
+    @title.each_with_index do |w, i|
+      if i == 0
+        new_title.push(w.capitalize)
+      elsif conjunctions.include?(w) || prepositions.include?(w) || articles.include?(w)
         new_title.push(w)
+      elsif w == 'i'
+        new_title.push(w.capitalize)
       else
         new_title.push(w.capitalize)
       end
