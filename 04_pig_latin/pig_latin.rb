@@ -3,19 +3,27 @@ def translate phrase
   vowels = ['a', 'e', 'i', 'o']
   before_vowel = []
   after_vowel = []
+  new_phrase = []
   hit_vowel = false
-  old_text.each do |l|
-    if vowels.include?(l)
-      hit_vowel = true
+  #begin going through words
+  words = phrase.split(" ")
+  words.each do |word|
+    old_word = word.split("")
+    old_word.each do |l|
+      if vowels.include?(l)
+        hit_vowel = true
+      end
+      if hit_vowel == false
+        before_vowel.push(l)
+      else
+        after_vowel.push(l)
+      end
     end
-    if hit_vowel == false
-      before_vowel.push(l)
-    else
-      after_vowel.push(l)
-    end
+    new_word = after_vowel.join("") + before_vowel.join("") + "ay"
+    new_phrase.push(new_word)
+    after_vowel = []
+    before_vowel = []
+    hit_vowel = false
   end
-  string = after_vowel.join("") + before_vowel.join("") + "ay"
-  return string
-end 
-
-
+  return new_phrase.join(" ")
+end
