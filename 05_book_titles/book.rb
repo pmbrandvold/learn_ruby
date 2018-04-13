@@ -1,3 +1,9 @@
 class Book
-# write your code here
+  def title=(title)
+    @title = title
+  end
+
+  def title
+    @title.capitalize
+  end
 end
