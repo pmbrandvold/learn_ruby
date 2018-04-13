@@ -5,8 +5,13 @@ class Book
 
   def title
     new_title = []
+    conjunctions = ['and', 'an', 'the']
     @title.each do |w|
-      new_title.push(w.capitalize)
+      if conjunctions.include?(w)
+        new_title.push(w)
+      else
+        new_title.push(w.capitalize)
+      end
     end
     new_title.join(" ")
   end
